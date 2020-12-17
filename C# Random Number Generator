@@ -1,0 +1,14 @@
+# Genarate a number between x, y
+
+using System;
+public class Program {
+   public static void Main() {
+      Random r = new Random();
+      int genRand= r.Next(1,10);
+      Console.WriteLine("Random Number = "+genRand);
+      if (genRand < 6)
+      { Console.WriteLine("Food is Poisoned !!");}
+      else if (genRand > 5)
+      {Console.WriteLine("Food is Good !!");}
+   }
+}
