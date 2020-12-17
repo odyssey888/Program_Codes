@@ -1,0 +1,117 @@
+Making a RPG 
+ 
+using System;
+namespace RPG_Game
+{
+class Program
+  {
+      static void Main(string[] args)
+      {
+          // Initializing Game
+          Console.WriteLine("Enter a name for your character: ");
+          string playerName = Console.ReadLine();
+          Console.WriteLine("Welcome to the game, " + playerName + ".");
+          int playerLife = 25;
+          bool isPlayerDead = false;
+          //Information concerning enemy
+          bool isEnemyDead = false;  // False means no
+          int enemyLife = 10;
+          Console.WriteLine("You encountered and Enemy! Choose:\n 1. Single Attack\n 2. 3-Strike Attack\n 3. Defense\n 4. Run !!\n");
+          // Save Player's Choice
+          while (!isEnemyDead || !isPlayerDead)  // while loop only runs is condition is true
+          {
+          string playerAction = Console.ReadLine();
+          if (playerAction == "1")
+          {
+              Console.WriteLine("You decide to do Single Attack!");
+              enemyLife = enemyLife - 2;
+              playerLife = playerLife - 1;
+              Console.WriteLine("Enemy Life value is : " + enemyLife);
+              Console.WriteLine("Player Life value is : " + playerLife);
+              if (playerLife < 0 )
+               {
+                 isPlayerDead = true;
+                 isEnemyDead = true;
+                 Console.WriteLine("You are killed!");
+                 Console.WriteLine("Game Over");
+               }
+              else if (enemyLife < 0)
+              {
+                 isPlayerDead = true;
+                 isEnemyDead = true;
+                 Console.WriteLine("Great; you killed enemy!");
+                 Console.WriteLine("Game Over");
+               }
+          }
+        
+          else if (playerAction == "2")
+          {
+              Console.WriteLine("You decide to do 3-Strike Attack!");
+               enemyLife = enemyLife - 4;
+              playerLife = playerLife - 1;
+              Console.WriteLine("Enemy Life value is : " + enemyLife);
+              Console.WriteLine("Player Life value is : " + playerLife);
+               if (playerLife < 0 )
+               {
+                 isPlayerDead = true;
+                 isEnemyDead = true;
+                 Console.WriteLine("You are killed!");
+                 Console.WriteLine("Game Over");
+               }
+              else if (enemyLife < 0)
+              {
+                 isPlayerDead = true;
+                 isEnemyDead = true;
+                 Console.WriteLine("Great; you killed enemy!");
+                 Console.WriteLine("Game Over");
+               }
+          }
+          else if (playerAction == "3")
+          {
+             Console.WriteLine("You decide to Defend!");
+               enemyLife = enemyLife - 1;
+              playerLife = playerLife - 5;
+             Console.WriteLine("Enemy Life value is : " + enemyLife);
+              Console.WriteLine("Player Life value is : " + playerLife);
+                if (playerLife < 0 )
+               {
+                 isPlayerDead = true;
+                 isEnemyDead = true;
+                 Console.WriteLine("You are killed!");
+                 Console.WriteLine("Game Over");
+               }
+              else if (enemyLife < 0)
+              {
+                 isPlayerDead = true;
+                 isEnemyDead = true;
+                 Console.WriteLine("Great; you killed enemy!");
+                 Console.WriteLine("Game Over");
+               }
+          }
+          else if (playerAction == "4")
+          {
+             Console.WriteLine("You decide to Run!");
+              enemyLife = enemyLife - 1;
+              playerLife = playerLife - 3;
+              Console.WriteLine("Enemy Life value is : " + enemyLife);
+              Console.WriteLine("Player Life value is : " + playerLife);
+               if (playerLife < 0 )
+               {
+                 isPlayerDead = true;
+                 isEnemyDead = true;
+                 Console.WriteLine("You are killed!");
+                 Console.WriteLine("Game Over");
+               }
+              else if (enemyLife < 0)
+              {
+                 isPlayerDead = true;
+                 isEnemyDead = true;
+                 Console.WriteLine("Great; you killed enemy!");
+                 Console.WriteLine("Game Over");
+               }
+          }
+ 
+        }
+      }
+  }
+}
