@@ -1,0 +1,40 @@
+# Using Turtle Module and The Graphics App
+import turtle
+
+s = turtle.getscreen() # cursor
+t = turtle.Turtle() # using the cursor property
+
+# Controls thickness of lines drawn
+t.pensize(5)
+
+# Draw a square
+t.pencolor("green")
+
+t.begin_fill() 
+t.fillcolor("yellow") # default fill color is black and shape does not have be totally closed
+t.fd(300) # motion in direction of cursor
+t.lt(90)  # turning anti-clockwise angle valuet.rt(90)
+t.fd(400)
+t.lt(125)
+t.fd(500)
+t.end_fill()
+
+#Sets the line color; no stroke color
+t.pencolor("red")
+
+# Draw a circle
+t.begin_fill()
+t.circle(150)
+t.end_fill()
+
+t.penspeed = 50
+t.lt(90)
+t.fd(300)
+
+t.penup() # together with the pendown, use to move the cursor to another point
+t.rt(45)
+t.fd(30)
+t.pendown()
+t.shape("turtle") # Default is an arrow
+t.pencolor("blue")
+t.dot(25)
