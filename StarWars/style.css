@@ -18,6 +18,8 @@ body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
   background: #fff9e2;
+  background-image: url('sw_landscape.png');
+  background-repeat: no-repeat;
   text-align: center;
 }
 
